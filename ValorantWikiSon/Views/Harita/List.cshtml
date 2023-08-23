@@ -1,0 +1,25 @@
+﻿@model ValorantWikiSon.ViewModels.HaritaViewModel
+@{
+    var haritalar = Model.Haritalar;
+}
+<div class="row" id="about">
+    <div class="container-fluid">
+        <div class="wrapper-works">
+            <div class="portfoliO">
+                <div>
+                    <h1 style="padding: 50px;">HARİTALAR</h1>
+                </div>
+                <div class="portfolio-wrap">
+                    <div class="myport wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+                        @foreach (var harita in haritalar)
+                        {
+                            @await Html.PartialAsync("_harita", harita)
+                        }
+                        <div class="gap"></div>
+                        <div class="gap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

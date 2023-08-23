@@ -1,0 +1,17 @@
+﻿@model Harita
+<div class="container" style="margin-top: 100px;" id="about">
+    <div class="news-content wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1s; animation-delay: 600ms; animation-name: fadeInLeft;">
+        <div class="entry-header">
+            <div class="blog-image" style="width: 900px;">
+                <a href="#"><img alt="" src="@Model.Resim" class="img-responsive"></a>
+            </div>
+
+        </div>
+        <div class="entry-content">
+            <h2 class="entry-title">
+                <a href="blog.html">@Model.Isim</a>
+            </h2>
+            <p>@Model.Aciklama</p>
+        </div>
+    </div>
+</div>

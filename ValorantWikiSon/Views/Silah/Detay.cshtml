@@ -1,0 +1,68 @@
+﻿@model Silah 
+<div class="container" style="margin-top: 100px; margin-bottom: 80px;" id="about">
+    <div class="news-content wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1s; animation-delay: 600ms; animation-name: fadeInLeft;">
+        <div class="entry-header">
+            <div class="blog-image" style="width: 900px;">
+                <a href="#"><img alt="" src="/images/silahlar/@Model.Detayresim" class="img-responsive"></a>
+            </div>
+
+        </div>
+        <div class="entry-content">
+            <h2 class="entry-title">
+                <a href="#">@Model.Isim</a>
+            </h2>
+
+            <p>@Model.Aciklama</p>
+        </div>
+    </div>
+</div>
+<div class="facts parallax" style="margin-bottom: 15%;">
+    <div class="overlay">
+        <div class="wrapper-block-facts">
+            <div class="container">
+                <div class="row">
+                    <div class="element-title">
+                        <h1 class="main-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">@Model.Isim</h1>
+                        <h3 class="white-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Bazı Özellikleri</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="wrapper-number">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+                                <p class="timer" data-from="0" data-to="@Model.Fiyat" data-speed="2000">@Model.Fiyat</p>
+                            </div>
+                            <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                                Fiyat
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">
+                                <p class="timer" data-from="0" data-to="@Model.Hasar" data-speed="2000">@Model.Hasar</p>
+                            </div>
+                            <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+                                Hasar
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+                                <p class="timer" data-from="0" data-to="@Model.Reloadspeed" data-speed="2000">@Model.Reloadspeed</p>
+                            </div>
+                            <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+                                Şarjör Değişim Hızı
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="750ms">
+                                <p class="timer" data-from="0" data-to="@Model.Atishizi" data-speed="2000">@Model.Atishizi</p>
+                            </div>
+                            <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="750ms">
+                                Atış Hızı
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

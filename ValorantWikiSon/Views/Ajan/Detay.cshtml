@@ -1,0 +1,66 @@
+﻿@model Ajan
+    <div class="clients parallax" id="about">
+        <!-- Block Title -->
+        <div class="overlay">
+            <div class="wrapper-block-clients">
+                <div class="element-title">
+                    <div class="row">
+                        <div class="container">
+                            <h1 class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">@Model.Isim</h1>
+                            <h3 class="white-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">@Model.Rol</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Block Title -->
+                <div class="row">
+                    <div class="container">
+                        <div class="wrapper-clients wow fadeInDown" data-wow-duration="1s" data-wow-delay="500ms">
+                            <!-- Start Testimonial Slider -->
+                            <div class="carousel slide carousel-mod" data-ride="carousel" id="testimonial">
+                                <div class="carousel-inner">
+                                    <!-- Testimonial #1  -->
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div class="testimonial-inner">
+                                                    <img class="img-circle" src="@Model.Pp" alt="" title="" /><!-- Testimonial Image  -->
+                                                    <p>@Model.Aciklama</p><!-- Tesimonial  -->
+                                                </div>
+                                                <h5>-- Valorant, @Model.Isim --</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Testimonial #1  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-why-us" style="margin-bottom: 30%;">
+        <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+            <i class="hovicon effect-1 sub-a"><img src="/images/ajanlar/yetenekler/@Model.C" /></i>
+            <h2>C YETENEĞİ</h2>
+            <p></p>
+        </div>
+        <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+            <i class="hovicon effect-1 sub-a"><img src="/images/ajanlar/yetenekler/@Model.Q" /></i>
+            <h2>Q YETENEĞİ</h2>
+            <p></p>
+        </div>
+        <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+            <i class="hovicon effect-1 sub-a"><img src="/images/ajanlar/yetenekler/@Model.E" /></i>
+            <h2>E YETENEĞİ</h2>
+            <p></p>
+        </div>
+        <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+            <i class="hovicon effect-1 sub-a"><img src="/images/ajanlar/yetenekler/@Model.X" /></i>
+            <h2>X YETENEĞİ</h2>
+            <p></p>
+        </div>
+    </div>
+
+
+

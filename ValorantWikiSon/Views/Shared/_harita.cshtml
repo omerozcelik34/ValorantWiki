@@ -1,0 +1,15 @@
+﻿@model Harita
+<div class="mix category-1 portfolio" data-myorder="1">
+    <div class="img-holder">
+        <a class="folio-read-more" href="#" data-single_url="portfolio-single-image.html"></a>
+        <img class="" src="@Model.Resim" alt="This is the title"> <!-- Change Image -->
+        <div class="works-overlay">
+            <div class="img-overlay"></div>
+        </div>
+        <div class="overlay-content">
+            <div class="works-overlay-category">@Model.Isim</div>
+            <div class="works-overlay-text">haritaları keşfedebilirsin</div>
+            <div class="works-overlay-icon"><a asp-controller="Harita" asp-action="Detay" asp-route-id="@Model.id"><i class="fa fa-search"></i></a></div>
+        </div>
+    </div>
+</div>

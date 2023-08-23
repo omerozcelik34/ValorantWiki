@@ -1,0 +1,39 @@
+﻿@model ValorantWikiSon.ViewModels.SilahViewModel
+    @{
+        var silahlar = Model.Silahlar;
+    }
+    <!-- Team Section -->
+    <section class="section-wrapper" id="about">
+        <div class="team">
+            <!-- Block Title -->
+            <div class="meet-the-team">
+                <div class="element-title">
+                    <div class="row">
+                        <div class="container">
+                            <div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                                <h1><span>SİLAHLAR</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Block Title -->
+                <div class="row">
+                    <div class="container">
+                        <div class="wrapper-team">
+                            @foreach (var silah in silahlar)
+                            {
+                                @await Html.PartialAsync("_silah", silah)
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Team -->
+            <div id="team-single-wrap">
+                <div id="team-single">
+                </div>
+            </div>
+            <!-- End Profile Team -->
+        </div>
+    </section>
+    <!-- End Team Section -->

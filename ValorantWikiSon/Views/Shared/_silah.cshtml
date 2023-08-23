@@ -1,0 +1,17 @@
+﻿@model Silah
+
+<div class="col-lg-4 col-md-4">
+    <div class="team-member">
+        <a asp-controller="Silah" asp-action="Detay" asp-route-id="@Model.id">
+            <div class="team-member-holder wow flipInY" data-wow-duration="1s" data-wow-delay="300ms" title="Detay">
+                <div class="team-member-image" style="padding-bottom: 40%; padding-top: 20%;">
+                    <img src="@Model.Resim" alt="" /> <!-- Change Image -->
+                </div>
+                <div class="team-member-meta">
+                    <h4 class="team-member-name"><span class="main-color">@Model.Isim</span></h4>
+                    <div class="team-member-role">@Model.Rol</div>
+                </div>
+            </div>
+        </a>   
+    </div>
+</div>

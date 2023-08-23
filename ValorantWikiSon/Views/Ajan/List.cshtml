@@ -1,0 +1,41 @@
+﻿@model ValorantWikiSon.ViewModels.AjanViewModel
+@{ 
+    var ajanlar = Model.Ajanlar;
+}
+<!-- Team Section -->
+<section class="section-wrapper" id="about">
+    <div class="team">
+        <!-- Block Title -->
+        <div class="meet-the-team">
+            <div class="element-title">
+                <div class="row">
+                    <div class="container">
+                        <div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1><span>VALORANT AJANLAR</span></h1>
+                        </div>
+                        <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Ajanları Keşfedebilirsin</h1>
+                        <h3 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms"><span class="main-color">AJANINI</span> <span class="main-color">SEÇ</span></h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Block Title -->
+            <div class="row">
+                <div class="container">
+                    <div class="wrapper-team">
+                        @foreach (var ajan in ajanlar)
+                        {
+                            @await Html.PartialAsync("_ajan", ajan)
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Profile Team -->
+        <div id="team-single-wrap">
+            <div id="team-single">
+            </div>
+        </div>
+        <!-- End Profile Team -->
+    </div>
+</section>
+<!-- End Team Section -->

@@ -1,0 +1,56 @@
+﻿@model ValorantWikiSon.ViewModels.HaberViewModel
+@{
+    var haberler = Model.Haberler;
+    var sayac1 = 0;
+    var sayac2 = 0;
+}
+<section class="section-wrapper" id="about">
+    <div class="news">
+        <!-- Block Title -->
+        <div class="element-title">
+            <div class="row">
+                <div class="container">
+                    <div class="section-title wow fadeInDown">
+                        <h1><span>HABERLER & ETKİNLİKLER</span></h1>
+                    </div>
+                    <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Haberlere Göz At.</h1>
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Haberlere dair<span class="main-color"> HERŞEY </span>Burada</h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Block Title -->
+        <div class="container">
+            <div class="wrapper-news">
+                <div class="row">
+                    @foreach (var haber in haberler)
+                    {
+                        @await Html.PartialAsync("_haber", haber)
+                        sayac1++;
+                        if (sayac1 == 2)
+                        {
+                            sayac1 = 0;
+                            break;
+                        }
+                    }
+                </div>
+                <div class="row">
+                    @foreach (var haber in haberler)
+                    {
+                        sayac2++;
+                        if (sayac2 == 1 || sayac2 == 2)
+                        {
+                            continue;
+                        }
+                        if (sayac2 == 5)
+                        {
+                            sayac2 = 0;
+                            break;
+                        }
+                        @await Html.PartialAsync("_haber", haber)
+                                             
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
